@@ -1,0 +1,19 @@
+.TodoListItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+}
+
+.important {
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+.label {
+  flex-grow: 1;
+}
+
+.btn {
+  padding: 0.2rem 0.6rem;
+  display: flex;
+  margin-right: 0.4rem;
+}
