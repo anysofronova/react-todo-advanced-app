@@ -2,6 +2,8 @@ import React from "react";
 import AppHeader from "../AppHeader/AppHeader";
 import SearchPanel from "../SearchPanel/SearchPanel";
 import TodoList from "../TodoList/TodoList";
+import style from "./App.module.css";
+import cn from "classnames";
 
 const App = () => {
   const todoData = [
@@ -22,8 +24,8 @@ const App = () => {
     },
   ];
   return (
-    <div>
-      <AppHeader />
+    <div className={cn(style.App)}>
+      <AppHeader toDo={1} done={3} />
       <SearchPanel />
       <TodoList todoData={todoData} />
     </div>
