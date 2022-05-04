@@ -19,8 +19,11 @@ export default class TodoListItem extends React.Component {
       return { important: !important };
     });
   };
+  onDeleteTask = () => {
+    this.props.deleteTask(this.props.id);
+  };
   render() {
-    const { label, id, onDeleted } = this.props;
+    const { label } = this.props;
     const { done, important } = this.state;
     return (
       <div className={cn(style.TodoListItem)}>
@@ -38,7 +41,7 @@ export default class TodoListItem extends React.Component {
         <button className={cn(style.btn, "btn")} onClick={this.onImportantTask}>
           <BsExclamationLg />
         </button>
-        <button className={cn(style.btn, "btn")} onClick={() => onDeleted(id)}>
+        <button className={cn(style.btn, "btn")} onClick={this.onDeleteTask}>
           <BsTrash />
         </button>
       </div>
