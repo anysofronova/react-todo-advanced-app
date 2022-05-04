@@ -10,6 +10,11 @@
 }
 .label {
   flex-grow: 1;
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
 }
 
 .btn {
