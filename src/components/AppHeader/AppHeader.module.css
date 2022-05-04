@@ -1,0 +1,16 @@
+.AppHeader {
+  display: flex;
+  align-items: flex-end;
+}
+
+.AppHeader h1 {
+  flex-grow: 1;
+  font-weight: 400;
+  color: var(--grey-dark);
+}
+
+.AppHeader h2 {
+  font-size: 1.2rem;
+  color: var(--grey-dark);
+  font-weight: 300;
+}
