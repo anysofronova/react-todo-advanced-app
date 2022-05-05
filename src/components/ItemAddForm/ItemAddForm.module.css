@@ -1,13 +1,25 @@
+.form {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  max-width: 100%;
+}
+
+label {
+  flex-grow: 2;
+}
+
 .input {
-  padding: 0.3rem 0 0.3rem 0.8rem;
-  outline: none;
-  border: 1px solid var(--grey-dark);
-  border-radius: 4px;
-  margin-right: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  flex-grow: 1;
 }
 
 .btn {
   line-height: 1;
   padding: 0.3rem 0.6rem;
-  cursor: pointer;
+  flex-grow: 1;
+}
+@media (max-width: 600px) {
+  .form {
+    /*font-size: 0.2rem;*/
+  }
 }

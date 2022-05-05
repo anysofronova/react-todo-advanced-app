@@ -90,12 +90,13 @@ class App extends React.Component {
     return (
       <div className={cn(style.App)}>
         <AppHeader toDo={todoCount} done={doneCount} />
+        <ItemAddForm addTask={this.addTask} />
         <SearchPanel
           searchTask={this.onSearchTask}
           filterTask={this.onFilterTask}
           filter={filter}
         />
-        <ItemAddForm addTask={this.addTask} />
+
         <TodoList
           todoData={visibleItems}
           deleteTask={this.deleteTask}

@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import ItemStatusFilter from "../ItemStatusFilter/ItemStatusFilter";
 import style from "./SearchPanel.module.css";
 import cn from "classnames";
-import { BsSearch } from "react-icons/bs";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
 
 const SearchPanel = ({ searchTask, filterTask, filter }) => {
   const [searchText, setSearchText] = useState("");
@@ -17,11 +16,11 @@ const SearchPanel = ({ searchTask, filterTask, filter }) => {
   };
   return (
     <div className={cn(style.SearchPanel)}>
-      <label className={style.search}>
-        <BsSearch />
+      <label>
+        <AiOutlineSearch />
         <input
           type="text"
-          placeholder="search"
+          placeholder="Search"
           className={style.input}
           onChange={(e) => onChangeSearchText(e.currentTarget.value)}
           value={searchText}
