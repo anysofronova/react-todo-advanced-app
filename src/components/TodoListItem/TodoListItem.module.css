@@ -5,7 +5,7 @@
 }
 
 .important {
-  color: var(--blue-dark);
+  color: var(--grey-dark);
   font-weight: 700;
 }
 .label {
