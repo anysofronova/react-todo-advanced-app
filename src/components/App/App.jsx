@@ -13,6 +13,7 @@ class App extends React.Component {
       this.createTodoItem("Build React App"),
       this.createTodoItem("Have a lunch"),
     ],
+    term: "",
   };
   createTodoItem(label) {
     return {
@@ -49,17 +50,28 @@ class App extends React.Component {
       return { todoData: this.toggleProperty(todoData, id, "done") };
     });
   };
+  onSearchTask = (text) => {
+    this.setState({ term: text });
+  };
+  searchTask = (items, term) => {
+    if (!term.length) return items;
+    return items.filter(
+      (i) => i.label.toLowerCase().indexOf(term.toLowerCase()) > -1
+    );
+  };
+
   render() {
-    const { todoData } = this.state;
+    const { todoData, term } = this.state;
+    const visibleItems = this.searchTask(todoData, term);
     const doneCount = todoData.filter((i) => i.done).length;
     const todoCount = todoData.length - doneCount;
     return (
       <div className={cn(style.App)}>
         <AppHeader toDo={todoCount} done={doneCount} />
-        <SearchPanel />
+        <SearchPanel searchTask={this.onSearchTask} />
         <ItemAddForm addTask={this.addTask} />
         <TodoList
-          todoData={todoData}
+          todoData={visibleItems}
           deleteTask={this.deleteTask}
           toggleImportant={this.toggleImportant}
           toggleDone={this.toggleDone}
