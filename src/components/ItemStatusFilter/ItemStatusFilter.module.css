@@ -8,16 +8,8 @@
   padding: 0.3rem 0.6rem;
 }
 
-.btn:focus:not(:active) {
+.checked {
   border-color: var(--grey-dark);
   background-color: var(--grey-dark);
-  color: var(--white);
-}
-
-.btn:hover,
-.btn:active,
-.btn:focus {
-  border-color: var(--grey-ligth);
-  background-color: var(--grey-ligth);
   color: var(--white);
 }

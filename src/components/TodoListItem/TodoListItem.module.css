@@ -5,11 +5,16 @@
 }
 
 .important {
-  color: var(--blue-dark);
+  color: var(--grey-dark);
   font-weight: 700;
 }
 .label {
   flex-grow: 1;
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
 }
 
 .btn {
