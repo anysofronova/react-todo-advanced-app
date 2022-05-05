@@ -4,7 +4,7 @@ import style from "./SearchPanel.module.css";
 import cn from "classnames";
 import { BsSearch } from "react-icons/bs";
 
-const SearchPanel = ({ searchTask }) => {
+const SearchPanel = ({ searchTask, filterTask, filter }) => {
   const [searchText, setSearchText] = useState("");
   const onChangeSearchText = (e) => {
     setSearchText(e);
@@ -22,7 +22,7 @@ const SearchPanel = ({ searchTask }) => {
           value={searchText}
         />
       </label>
-      <ItemStatusFilter />
+      <ItemStatusFilter filterTask={filterTask} filter={filter} />
     </div>
   );
 };

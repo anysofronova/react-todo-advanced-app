@@ -2,18 +2,32 @@ import React from "react";
 import cn from "classnames";
 import style from "./ItemStatusFilter.module.css";
 
-export default function ItemStatusFilter() {
+export default function ItemStatusFilter({ filterTask, filter }) {
+  const onFilterTask = (e) => {
+    e.preventDefault();
+    filterTask(e.target.outerText);
+  };
+  const buttons = [
+    { name: "all", label: "All" },
+    { name: "active", label: "Active" },
+    { name: "done", label: "Done" },
+  ];
   return (
     <div className={cn(style.btnGroup)}>
-      <button type="button" className={cn(style.btn, "btn")}>
-        All
-      </button>
-      <button type="button" className={cn(style.btn, "btn")}>
-        Active
-      </button>
-      <button type="button" className={cn(style.btn, "btn")}>
-        Done
-      </button>
+      {buttons.map((i) => (
+        <button
+          key={i.name}
+          type="button"
+          className={cn(
+            style.btn,
+            "btn",
+            filter === i.label ? style.checked : ""
+          )}
+          onClick={(e) => onFilterTask(e)}
+        >
+          {i.label}
+        </button>
+      ))}
     </div>
   );
 }

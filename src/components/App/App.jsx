@@ -14,6 +14,7 @@ class App extends React.Component {
       this.createTodoItem("Have a lunch"),
     ],
     term: "",
+    filter: "",
   };
   createTodoItem(label) {
     return {
@@ -59,16 +60,38 @@ class App extends React.Component {
       (i) => i.label.toLowerCase().indexOf(term.toLowerCase()) > -1
     );
   };
+  onFilterTask = (option) => {
+    this.setState({ filter: option });
+  };
+  filterTask = (items, option) => {
+    switch (option) {
+      case "All":
+        return items;
+      case "Active":
+        return items.filter((i) => !i.done);
+      case "Done":
+        return items.filter((i) => i.done);
+      default:
+        return items;
+    }
+  };
 
   render() {
-    const { todoData, term } = this.state;
-    const visibleItems = this.searchTask(todoData, term);
+    const { todoData, term, filter } = this.state;
+    const visibleItems = this.filterTask(
+      this.searchTask(todoData, term),
+      filter
+    );
     const doneCount = todoData.filter((i) => i.done).length;
     const todoCount = todoData.length - doneCount;
     return (
       <div className={cn(style.App)}>
         <AppHeader toDo={todoCount} done={doneCount} />
-        <SearchPanel searchTask={this.onSearchTask} />
+        <SearchPanel
+          searchTask={this.onSearchTask}
+          filterTask={this.onFilterTask}
+          filter={filter}
+        />
         <ItemAddForm addTask={this.addTask} />
         <TodoList
           todoData={visibleItems}
