@@ -20,3 +20,11 @@
   border: none;
   outline: none;
 }
+
+@media (max-width: 600px) {
+  .SearchPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
