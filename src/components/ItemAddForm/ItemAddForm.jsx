@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./ItemAddForm.module.css";
 import cn from "classnames";
+import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai";
 
 const ItemAddForm = ({ addTask }) => {
   const [task, setTask] = useState("");
@@ -9,17 +10,24 @@ const ItemAddForm = ({ addTask }) => {
     addTask(task);
     setTask("");
   };
-
+  const onClear = () => {
+    setTask("");
+  };
   return (
-    <form onSubmit={onAddTask}>
-      <input
-        type="text"
-        className={cn(style.input)}
-        placeholder={"new task"}
-        value={task}
-        onChange={(e) => setTask(e.currentTarget.value)}
-      />
-      <button className={cn(style.btn)}>Add new task</button>
+    <form onSubmit={onAddTask} className={cn(style.form)}>
+      <label>
+        <AiOutlinePlus />
+        <input
+          type="text"
+          className={cn(style.input)}
+          placeholder={"New task"}
+          value={task}
+          onChange={(e) => setTask(e.currentTarget.value)}
+        />
+        <AiOutlineClose onClick={() => onClear()} />
+      </label>
+
+      <button className={cn(style.btn, "btn")}>Add</button>
     </form>
   );
 };

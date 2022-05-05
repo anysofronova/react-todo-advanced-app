@@ -7,3 +7,9 @@
 .listItem {
   list-style: none;
 }
+
+@media (max-width: 600px) {
+  .TodoList {
+    padding: 0 1rem;
+  }
+}
