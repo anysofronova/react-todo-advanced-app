@@ -36,6 +36,7 @@ class App extends React.Component {
     });
   };
   addTask = (text) => {
+    if (!text.length) return;
     this.setState({
       ...this.state,
       todoData: [...this.state.todoData, this.createTodoItem(text)],
@@ -75,12 +76,14 @@ class App extends React.Component {
         return items;
     }
   };
+  sortTasks = (items) => {
+    return items.sort((a, b) => b.important - a.important);
+  };
 
   render() {
     const { todoData, term, filter } = this.state;
-    const visibleItems = this.filterTask(
-      this.searchTask(todoData, term),
-      filter
+    const visibleItems = this.sortTasks(
+      this.filterTask(this.searchTask(todoData, term), filter)
     );
     const doneCount = todoData.filter((i) => i.done).length;
     const todoCount = todoData.length - doneCount;
