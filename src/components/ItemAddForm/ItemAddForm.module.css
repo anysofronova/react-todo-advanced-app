@@ -18,8 +18,9 @@ label {
   padding: 0.3rem 0.6rem;
   flex-grow: 1;
 }
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .form {
-    /*font-size: 0.2rem;*/
+    flex-direction: column;
+    gap: 0.3rem;
   }
 }

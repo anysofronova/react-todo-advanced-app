@@ -31,6 +31,12 @@ body {
   outline: none;
 }
 
+h2 {
+  font-size: 1.2rem;
+  color: var(--grey-dark);
+  font-weight: 300;
+}
+
 input {
   outline: none;
   font-size: 1.2rem;
@@ -51,4 +57,10 @@ label {
   border: 1px solid var(--grey-dark);
   border-radius: 4px;
   margin-right: 0.5rem;
+}
+
+@media (max-width: 480px) {
+  label {
+    margin-right: 0;
+  }
 }

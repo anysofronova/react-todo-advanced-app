@@ -8,8 +8,20 @@
   list-style: none;
 }
 
+.info {
+  border-bottom: 0.5px solid var(--grey-dark);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
 @media (max-width: 600px) {
   .TodoList {
     padding: 0 1rem;
+  }
+}
+@media (min-width: 481px) {
+  .info {
+    display: none;
   }
 }

@@ -98,6 +98,8 @@ class App extends React.Component {
         />
 
         <TodoList
+          toDo={todoCount}
+          done={doneCount}
           todoData={visibleItems}
           deleteTask={this.deleteTask}
           toggleImportant={this.toggleImportant}
