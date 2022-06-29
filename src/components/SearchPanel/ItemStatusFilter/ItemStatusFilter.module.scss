@@ -1,0 +1,11 @@
+.btnGroup {
+  display: flex;
+  gap: 0.2rem;
+  .checked {
+    border-color: var(--grey-dark);
+    background-color: var(--grey-dark);
+    color: var(--white);
+  }
+}
+
+
