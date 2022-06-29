@@ -1,13 +1,20 @@
 {
   "files": {
-    "main.css": "/react-todo-advanced-app/static/css/main.60af4039.css",
-    "main.js": "/react-todo-advanced-app/static/js/main.9e50a396.js",
+    "main.css": "/react-todo-advanced-app/static/css/main.cd443986.chunk.css",
+    "main.js": "/react-todo-advanced-app/static/js/main.944fc9ac.chunk.js",
+    "main.js.map": "/react-todo-advanced-app/static/js/main.944fc9ac.chunk.js.map",
+    "runtime-main.js": "/react-todo-advanced-app/static/js/runtime-main.a5a27e25.js",
+    "runtime-main.js.map": "/react-todo-advanced-app/static/js/runtime-main.a5a27e25.js.map",
+    "static/js/2.f5f580df.chunk.js": "/react-todo-advanced-app/static/js/2.f5f580df.chunk.js",
+    "static/js/2.f5f580df.chunk.js.map": "/react-todo-advanced-app/static/js/2.f5f580df.chunk.js.map",
     "index.html": "/react-todo-advanced-app/index.html",
-    "main.60af4039.css.map": "/react-todo-advanced-app/static/css/main.60af4039.css.map",
-    "main.9e50a396.js.map": "/react-todo-advanced-app/static/js/main.9e50a396.js.map"
+    "static/css/main.cd443986.chunk.css.map": "/react-todo-advanced-app/static/css/main.cd443986.chunk.css.map",
+    "static/js/2.f5f580df.chunk.js.LICENSE.txt": "/react-todo-advanced-app/static/js/2.f5f580df.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/css/main.60af4039.css",
-    "static/js/main.9e50a396.js"
+    "static/js/runtime-main.a5a27e25.js",
+    "static/js/2.f5f580df.chunk.js",
+    "static/css/main.cd443986.chunk.css",
+    "static/js/main.944fc9ac.chunk.js"
   ]
 }
