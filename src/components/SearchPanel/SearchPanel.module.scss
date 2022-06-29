@@ -1,0 +1,20 @@
+.searchPanel {
+  display: flex;
+  label{
+    flex-grow: 1;
+    .input {
+      flex-grow: 1;
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+  .searchPanel {
+    flex-direction: column;
+    gap: 1rem;
+    label {
+      margin-right: 0;
+    }
+  }
+}

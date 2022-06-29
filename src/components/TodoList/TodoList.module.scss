@@ -1,0 +1,9 @@
+.TodoList {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  .listItem {
+    list-style: none;
+  }
+}
